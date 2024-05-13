@@ -1,0 +1,10 @@
+{
+    "navbar": {
+      "comedy": "Comedy",
+      "horror": "Horror",
+      "documentary":"Documentary",
+      "action":"Action",
+      "family": "Family",
+      "dram": "Dram"
+    }
+  }

@@ -1,0 +1,10 @@
+{
+    "navbar": {
+      "comedy": "Komedi",
+      "horror": "Korku",
+      "documentary":"Belgesel",
+      "action":"Aksiyon",
+      "family": "Aile",
+      "dram": "Dram"
+    }
+  }

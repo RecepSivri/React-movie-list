@@ -38,6 +38,15 @@ function Header() {
                 <Link className='header-button' to="/documentary">
                     {t('navbar.documentary')}
                 </Link>
+                <Link className='header-button' to="/adventure">
+                    {t('navbar.adventure')}
+                </Link>
+                <Link className='header-button' to="/history">
+                    {t('navbar.history')}
+                </Link>
+                <Link className='header-button' to="/war">
+                    {t('navbar.war')}
+                </Link>
             </div>
             <div style={{marginLeft: '20px', marginRight: '20px'}}>
                 <LanguageSelector onChange = {onChange} value= {'tr'}/>

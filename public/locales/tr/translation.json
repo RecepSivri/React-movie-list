@@ -5,6 +5,9 @@
       "documentary":"Belgesel",
       "action":"Aksiyon",
       "family": "Aile",
-      "dram": "Dram"
+      "dram": "Dram",
+      "adventure":"Macera",
+      "history":"Tarih",
+      "war":"Savaş"
     }
   }

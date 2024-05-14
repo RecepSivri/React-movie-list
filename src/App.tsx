@@ -10,6 +10,9 @@ import FamilyPage from './pages/familyPage/FamilyPage';
 import DocumentaryPage from './pages/documentaryPage/DocumentaryPage';
 import HorrorPage from './pages/horrorPage/HorrorPage';
 import ComedyPage from './pages/comedyPage/ComedyPage';
+import AdventurePage from './pages/adventurePage/AdventurePage';
+import WarPage from './pages/warPage/WarPage';
+import HistoryPage from './pages/historyPage/HistoryPage';
 function App() {
   const { ready } = useTranslation('en');
 
@@ -18,7 +21,6 @@ function App() {
       <div className="App">
       <BrowserRouter>
        <Header/>
-  
         <Routes>
             <Route path="/" element={<MainPage />} />
             <Route path="action" element={<ActionPage />} />
@@ -27,6 +29,9 @@ function App() {
             <Route path="documentary" element={<DocumentaryPage />} />
             <Route path="horror" element={<HorrorPage />} />
             <Route path="comedy" element={<ComedyPage />} />
+            <Route path="adventure" element={<AdventurePage />} />
+            <Route path="war" element={<WarPage />} />
+            <Route path="history" element={<HistoryPage />} />
 
         </Routes>
         <footer>asd</footer>

@@ -5,6 +5,9 @@
       "documentary":"Documentary",
       "action":"Action",
       "family": "Family",
-      "dram": "Dram"
+      "dram": "Dram",
+      "adventure":"Adventure",
+      "history":"History",
+      "war":"War"
     }
   }

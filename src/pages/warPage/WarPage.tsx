@@ -2,11 +2,11 @@ import { useState, useEffect } from 'react';
 import '../../App.css';
 import { getMovies } from '../../services/Services';
 
-function HorrorPage() {
+function WarPage() {
 
   const [movies, setMovies] = useState([]);
   useEffect(() => {
-    const api = getMovies('Horror');
+    const api = getMovies('War');
     if(api){
       api.then((res: any) => {
           console.log(res)
@@ -15,9 +15,9 @@ function HorrorPage() {
   },[])
   return (
     <>
-        Horror Page Works
+        WarPage Page Works
     </>
   );
 }
 
-export default HorrorPage;
+export default WarPage;

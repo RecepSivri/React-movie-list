@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import '../../App.css';
 import { getMovies } from '../../services/Services';
+import { useTranslation } from 'react-i18next';
 
 interface IpropsHistoryPage{
   toastr: any
@@ -9,7 +10,7 @@ interface IpropsHistoryPage{
 function HistoryPage(props: IpropsHistoryPage) {
 
   const {toastr} = props;
-
+  const { t } = useTranslation();
   const [movies, setMovies] = useState([]);
   useEffect(() => {
     const api = getMovies('History');
@@ -17,7 +18,7 @@ function HistoryPage(props: IpropsHistoryPage) {
       api.then((res: any) => {
           console.log(res)
       }, (err: any) => {
-        toastr('error', 'Sistem Hatası', 'Veriler yüklenirken hata oluştu lütfen tekrar deneyiniz!');
+        toastr('error', t('Sistem Hatası'), t('Veriler yüklenirken hata oluştu lütfen tekrar deneyiniz!'));
       })
     }
   },[])

@@ -9,5 +9,9 @@
       "adventure":"Macera",
       "history":"Tarih",
       "war":"Savaş"
+    },
+    "toastr":{
+      "system_error":"Sistem Hatası",
+      "loading_error_description":"Veriler yüklenirken hata oluştu lütfen tekrar deneyiniz!"
     }
   }

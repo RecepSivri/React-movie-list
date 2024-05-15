@@ -9,5 +9,9 @@
       "adventure":"Adventure",
       "history":"History",
       "war":"War"
+    },
+    "toastr":{
+      "system_error":"System Error",
+      "loading_error_description":"There is an error occured when data loading, please try again!"
     }
   }

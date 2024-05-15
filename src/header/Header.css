@@ -1,22 +1,21 @@
-.header{
-    background-color: #4d4d4d;
-    width: 100vw;
-    height: 50px;
+.header {
+  background-color: #4d4d4d;
+  width: 100vw;
+  height: 50px;
 }
 
-
 .header-button {
-    color: white;
-    font-size: 18px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    cursor: pointer;
-    text-decoration:none !important;
+  color: white;
+  font-size: 18px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  cursor: pointer;
+  text-decoration: none !important;
 }
 
 .category-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }

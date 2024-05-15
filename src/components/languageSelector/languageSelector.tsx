@@ -1,17 +1,16 @@
-import React, { useState } from 'react';
-import { Select } from 'antd';
+import React, { useState } from "react";
+import { Select } from "antd";
 
 const { Option } = Select;
 
 interface IPropsSelect {
-  onChange: (value: string) => void
-  value: string
+  onChange: (value: string) => void;
+  value: string;
 }
 
-const LanguageSelector = ( props: IPropsSelect ) => {
-  const {onChange, value} =  props;
+const LanguageSelector = (props: IPropsSelect) => {
+  const { onChange, value } = props;
   const [selectedLanguage, setSelectedLanguage] = useState(value);
-
 
   const handleLanguageChange = (value: any) => {
     setSelectedLanguage(value);
@@ -22,7 +21,7 @@ const LanguageSelector = ( props: IPropsSelect ) => {
 
   return (
     <Select
-      style={{ width: 80, cursor: 'pointer'}}
+      style={{ width: 80, cursor: "pointer" }}
       placeholder="Select a language"
       onChange={handleLanguageChange}
       value={selectedLanguage}

@@ -13,25 +13,39 @@ import ComedyPage from './pages/comedyPage/ComedyPage';
 import AdventurePage from './pages/adventurePage/AdventurePage';
 import WarPage from './pages/warPage/WarPage';
 import HistoryPage from './pages/historyPage/HistoryPage';
-function App() {
-  const { ready } = useTranslation('en');
 
+
+import { notification } from 'antd';
+
+type NotificationType = 'success' | 'info' | 'warning' | 'error';
+
+function App() {
+
+  const [api, contextHolder] = notification.useNotification();
+  const { ready } = useTranslation('en');
+  const openNotificationWithIcon = (type: NotificationType, header: string, message: string) => {
+    api[type]({
+      message: header,
+      description: message
+    });
+  };
   if (ready) {
     return (
       <div className="App">
+      {contextHolder}
       <BrowserRouter>
        <Header/>
         <Routes>
-            <Route path="/" element={<MainPage />} />
-            <Route path="action" element={<ActionPage />} />
-            <Route path="dram" element={<DramPage />} />
-            <Route path="family" element={<FamilyPage />} />
-            <Route path="documentary" element={<DocumentaryPage />} />
-            <Route path="horror" element={<HorrorPage />} />
-            <Route path="comedy" element={<ComedyPage />} />
-            <Route path="adventure" element={<AdventurePage />} />
-            <Route path="war" element={<WarPage />} />
-            <Route path="history" element={<HistoryPage />} />
+            <Route path="/" element={<MainPage  toastr = {openNotificationWithIcon}/>} />
+            <Route path="action" element={<ActionPage toastr = {openNotificationWithIcon}/>} />
+            <Route path="dram" element={<DramPage toastr = {openNotificationWithIcon}/>} />
+            <Route path="family" element={<FamilyPage toastr = {openNotificationWithIcon}/>} />
+            <Route path="documentary" element={<DocumentaryPage toastr = {openNotificationWithIcon}/>} />
+            <Route path="horror" element={<HorrorPage toastr = {openNotificationWithIcon}/>} />
+            <Route path="comedy" element={<ComedyPage toastr = {openNotificationWithIcon}/>} />
+            <Route path="adventure" element={<AdventurePage toastr = {openNotificationWithIcon}/>} />
+            <Route path="war" element={<WarPage toastr = {openNotificationWithIcon}/>} />
+            <Route path="history" element={<HistoryPage toastr = {openNotificationWithIcon}/>} />
 
         </Routes>
         <footer>asd</footer>

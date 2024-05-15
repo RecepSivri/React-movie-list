@@ -2,14 +2,20 @@ import { useState, useEffect } from 'react';
 import '../../App.css';
 import { getMovies } from '../../services/Services';
 
-function AdventurePage() {
+interface IpropsAdventurePage{
+  toastr: any
+}
 
+function AdventurePage(props: IpropsAdventurePage) {
+  const {toastr} = props
   const [movies, setMovies] = useState([]);
   useEffect(() => {
     const api = getMovies('History');
     if(api){
       api.then((res: any) => {
           console.log(res)
+      }, (err: any) => {
+        toastr('error', 'Sistem Hatası', 'Veriler yüklenirken hata oluştu lütfen tekrar deneyiniz!');
       })
     }
   },[])

@@ -1,8 +1,14 @@
 import axios from "axios";
 import {key} from "../config"
 const url = 'https://api.themoviedb.org/3/discover/movie?api_key='+key+'&with_genres=';
-
-
+const trendUrl = 'https://api.themoviedb.org/3/trending/all/day?language=en-US';
+const options = {
+  method: 'GET',
+  headers: {
+    accept: 'application/json',
+    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzYzIzNDE3NWE1ZjMzMzkxODcxMmMxNTAwYWE4YjViNCIsInN1YiI6IjY2NDMyNWE0MDFhYjcyOGUwZTM1NzE2NiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Wwr7UuWoY_XfZrVOi9-faVM5moyF-mVqBjHRZz2E1nA'
+  }
+};
 const genres = [
     {
       "id": 28,
@@ -91,5 +97,9 @@ export const getMovies = (name: string) => {
   } else {
     return null;
   }
-
 }
+
+export const getTrends = () => {
+  return axios.get(trendUrl, options);
+}
+
